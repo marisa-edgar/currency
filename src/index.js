@@ -2,26 +2,25 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Triangle from './js/triangle.js';
-import Rectangle from './js/rectangle.js';
+import CurrencyService from "./js/currency.js";
 
 $(document).ready(function() {
-  $('#triangle-checker-form').submit(function(event) {
-    event.preventDefault();
-    const length1 = parseInt($('#length1').val());
-    const length2 = parseInt($('#length2').val());
-    const length3 = parseInt($('#length3').val());
-    const triangle = new Triangle(length1, length2, length3);
-    const response = triangle.checkType();
-    $('#response').append(`<p>${response}</p>`);
-  });
+  $('#currencyConvert').click(function() {
+    const number = $("#number").val();
+    $('#currencyConvert').val("");
 
-  $('#rectangle-area-form').submit(function(event) {
-    event.preventDefault();
-    const length1 = parseInt($('#rect-length1').val());
-    const length2 = parseInt($('#rect-length2').val());
-    const rectangle = new Rectangle(length1, length2);
-    const response = rectangle.getArea();
-    $('#response2').append(`<p> The area of the rectangle is ${response}.</p>`);
+    let promise = CurrencyService.getCurrency();
+    promise.then(function(response) {
+      const body =JSON.parse(response);
+      const currencyConvert = new CurrencyService.converter(body, number);
+
+      let Currency = [];
+      for (let i = 0; i < body.length; i++) {
+        $('.showCurrency').html(Currency);
+        $('.showConverter').html(currencyConvert);
+      }
+    }, function(error) {
+      $('.showErrors').text(`There was an error processing your request: ${error}`);
+    });
   });
 });
