@@ -12,12 +12,10 @@ $(document).ready(function() {
     $('#currencyConvert').val("");
     let promise = CurrencyService.getCurrency(currency, number);
     promise.then(function(response) {
-    const body = JSON.parse(response);
-    if (body.conversion_rate) {
-      $("showCurrency").html(`${number} USD, would be ${body.conversion_rate} in ${currency}`);
-    } else {
-      $('.showErrors').text(`There was an error processing you request: ${response}`);
-    }
-  })
+      const body = JSON.parse(response);
+      $(".showCurrency").html(`${number} USD, would be ${body.conversion_rate} in ${currency}`);
+    }, function(error) {
+      $('.showErrors').text(`There was an error processing you request: ${error}`);
+    });
   });
 });
