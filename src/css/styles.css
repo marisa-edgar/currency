@@ -1,3 +1,25 @@
-body {
-  background-color: lightgreen;
+.container{
+  border: 3px solid;
+  width: 30%;
+  float: center;
+  text-align: center;
+  background-color: rgba(144, 238, 144, 0.697);
+}
+body{
+  background-image: url("https://blog.thomascook.in/wp-content/uploads/2019/10/highest-currencies-world-1024x679.jpg");
+  background-size: cover;
+}
+.showCurrency{
+  float: center;
+  border: 3px;
+  width: 30%;
+  text-align: center;
+  background-color: rgba(144, 238, 144, 0.697);
+}
+.showErrors{
+  float: center;
+  border: 3px;
+  width: 30%;
+  text-align: center;
+  background-color: rgba(144, 238, 144, 0.697);
 }
