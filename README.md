@@ -1,40 +1,40 @@
-# _{Application Name}_
+# _Currency Converter_
 
-#### By _**{List of contributors}**_
+#### By _**Marisa Edgar**_
 
-#### _{Brief description of application}_
+#### _Currency Converter_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_
+* _CSS_
+* _Javascript_
+* _ExchangeRate API_
+* _Webpack_
+* _JQuery_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_A currency converter which allows you to convert USD to any currency in europe_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _in your terminal run 'git clone https://github.com/marisa-edgar/currency.git'_
+* _run 'npm install' in your terminal from the projects root directory_
+* _sign up for an API key from https://www.exchangerate-api.com/_
+* _create a file named .env in the root directory and add API_KEY(your key) to the file_
+* _run 'npm run start'_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs_
+
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Questions or concerns email me at marisaedgar1212@gmail.com_
 
 MIT
 
 License under [MIT License]_(LICENSE)_
-Copyright (c) _date_ _author name(s)_
+Copyright (c) _2022_Marisa Edgar_
